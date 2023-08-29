@@ -1,0 +1,21 @@
+.wrapper {
+    max-width: 70rem;
+    margin: 2rem auto;
+    padding: 0 1rem; /*aqui diz q qnd a pessoa diminuir a tela nao vai ficar colado na parede o conteudo*/
+
+    display: grid;
+    grid-template-columns: 256px 1fr; /*diz que a primeira coluna tem 256px e a segunda ocupa o restante*/
+    gap: 2rem;
+    align-items: flex-start; /*side bar e feed sempre ficam alinhados pro topo, se nao tentam botar os dois com mesma altura
+    */
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 87.5%;
+    }
+
+    .wrapper {
+        grid-template-columns: 1fr;
+    }
+}
